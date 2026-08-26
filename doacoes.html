@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Comunitário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="src/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar p-3">
+            <a class="brand d-flex align-itens-center gap-2 mb-4" href="#">
+                <span class="brand-mark">S2</span>
+                <span>Mãos que Ajudam</span>
+            </a>
+
+            <p class="menu-label">Menu Principal</p>
+            <nav class="nav flex-column gap-1" aria-label="Navegação principal">
+              <a class="nav-link" href="/index.html">Home</a>
+              <a class="nav-link active" href="/doacoes.html">Doações</a>
+            </nav>
+        </aside>
+        <main class="main-content" id="inicio">
+            <header class="topbar d-flex justify-content-between align-items-center gap-3">
+                <div>
+                    <p class="eyebrow mb-1">Panel Admininstrativo</p>
+                    <h1 class="h4 mb-0">Doações necessárias</h1>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <!--<button class="icon-button" type="button">*</button>-->
+                    <div class="user-profile d-flex align-items-center gap-2">
+                        <span class="avatar">LT</span>
+                        <div class="d-none d-sm-block">
+                            <strong>Lucas Ternes</strong>
+                            <small>Admininstrador</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="content-area">
+                <section class="panel mb-4">
+                    <div class="panel-heading d-flex justify-content-between align-items-center gap-2">
+                        <div>
+                            <h2>Lista de necessidades</h2>
+                            <p>Pesquise e filtre os itens que podem ser doados.</p>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm" id="show-window">Informações da janela</button>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="visually-hidden" for="search">Pesquisar</label>
+                            <input class="form-control" placeholder="Pesquisar item ou categoria" id="search"/>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select">
+                                <option value="todas">Todas</option>
+                                <option value="urgente">Urgente</option>
+                                <option value="atencao">Atenção</option>
+                                <option value="normal">Normal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row g-3 mb-4" id="donation-content">
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>
