@@ -3,8 +3,10 @@ import * as donationInterface from './donationInterface.js'
 
 const render = () => {
   const data = donationService.get()
-  donationInterface.appendItems(data)
+  const filtro = document.querySelector('.form-select')
+  filtro.addEventListener('change', donationInterface.appendItems(data))
 
 }
 
 export { render }
+
